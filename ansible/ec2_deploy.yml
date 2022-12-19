@@ -17,7 +17,7 @@
           assign_public_ip: yes
         wait: yes
         state: "running"
-        access_key: "{{ access_key }}"
+        aws_access_key: "{{ aws_access_key }}"
         aws_secret: "{{ aws_secret }}"
         session_token: "{{ session_token }}"
       register: ec2
@@ -81,7 +81,7 @@
     amazon.aws.ec2_instance:
       region: us-east-1
       access_key: "{{ access_key }}"
-      aws_secret: "{{ aws_secret }}"
+      secret_key: "{{ secret_key }}"
       session_token: "{{ session_token }}"
       filters:
         "tag:Name": "eshop"

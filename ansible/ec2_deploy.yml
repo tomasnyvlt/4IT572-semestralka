@@ -17,9 +17,9 @@
           assign_public_ip: yes
         wait: yes
         state: "running"
-        aws_access_key: "{{ aws_access_key }}"
-        aws_secret: "{{ aws_secret }}"
-        session_token: "{{ session_token }}"
+        access_key: "{{ aws_access_key_id }}"
+        secret_key: "{{ aws_secret_access_key }}"
+        session_token: "{{ aws_session_token }}"
       register: ec2
 
     - name: Add instance host to group
@@ -80,9 +80,9 @@
   - name: Gather information about eshop instances
     amazon.aws.ec2_instance:
       region: us-east-1
-      access_key: "{{ access_key }}"
-      secret_key: "{{ secret_key }}"
-      session_token: "{{ session_token }}"
+      access_key: "{{ aws_access_key_id }}"
+      secret_key: "{{ aws_secret_access_key }}"
+      session_token: "{{ aws_session_token }}"
       filters:
         "tag:Name": "eshop"
       exact_count: 2

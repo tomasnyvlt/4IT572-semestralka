@@ -9,8 +9,8 @@
         image:
           id: ami-0b5eea76982371e91
         region: us-east-1
-        key_name: my-key-aws
-        vpc_subnet_id: subnet-00cb7be205379b73b
+        key_name: devops
+        vpc_subnet_id: subnet-0a2558e54598e324d
         security_group: eshop
         count: 1
         network:

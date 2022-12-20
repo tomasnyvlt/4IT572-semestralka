@@ -11,7 +11,7 @@
         region: us-east-1
         key_name: devops
         vpc_subnet_id: subnet-0a2558e54598e324d
-        security_group: eshop
+        security_group: launch-wizard-2
         count: 1
         network:
           assign_public_ip: yes
